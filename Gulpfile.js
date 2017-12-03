@@ -128,8 +128,6 @@ gulp.task('styles', function(){
     // Compile Sass:
     .pipe(plugins.sass.sync({
         includePaths: [
-          path.npm + '/bourbon/app/assets/stylesheets',
-          path.npm + '/bourbon-neat/app/assets/stylesheets',
           path.npm + '/node.normalize.scss'
         ]
       })

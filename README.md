@@ -1,6 +1,6 @@
 # Crafty Vagrant
 
-A neat starting point / development environment for [Craft](http://buildwithcraft.com/)-based projects, with [Vagrant](https://www.vagrantup.com/) configured and ready to go, [Gulp](http://gulpjs.com/) set up to take care of things like rendering Sass, bundling Javascript, minifying CSS and images, and asset-syncing, [Neat](http://neat.bourbon.io/) for elegant, semantic grid layouts, and a couple of shell scripts to simplify installing / restoring the database from backup.
+A neat starting point / development environment for [Craft](http://buildwithcraft.com/)-based projects, with [Vagrant](https://www.vagrantup.com/) configured and ready to go, [Gulp](http://gulpjs.com/) set up to take care of things like rendering Sass, bundling Javascript, minifying CSS and images, and asset-syncing, and a couple of shell scripts to simplify installing / restoring the database from backup.
 
 [![bitHound Score](https://www.bithound.io/github/niceandserious/crafty-vagrant/badges/score.svg)](https://www.bithound.io/github/niceandserious/crafty-vagrant)
 
@@ -66,8 +66,6 @@ If you want to work on Crafty Vagrant itself (ie. on the default config / starti
 * Ubuntu 16.04 (Xenial Xerus)
 * Apache 2.4
 * PHP 7 (with all Craft's [required PHP extensions](http://buildwithcraft.com/docs/requirements#required-php-extensions))
-* [Bourbon](http://bourbon.io/)
-* [Neat](http://neat.bourbon.io/)
 * [jQuery](http://jquery.com/)
 * [Modernizr](http://modernizr.com/)
 

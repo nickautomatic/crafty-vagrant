@@ -1,0 +1,33 @@
+$base-button-color:           #333333;
+$base-button-text-color:      #ffffff;
+$base-button-hover-color:     lighten($base-button-color, 20);
+$primary-button-color:        $link-color;
+$primary-button-hover-color:  $link-hover-color;
+
+.button {
+  background-color: $base-button-color;
+  border: none;
+  color: $base-button-text-color;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1;
+  padding: .75em 1em;
+  text-decoration: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background-color: $base-button-hover-color;
+  color: white;
+}
+
+.button--primary {
+  background-color: $primary-button-color;
+}
+
+.button--primary:hover,
+.button--primary:focus {
+  background-color: $primary-button-hover-color;
+}
