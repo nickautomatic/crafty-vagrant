@@ -55,7 +55,7 @@ If you want to work on Crafty Vagrant itself (ie. on the default config / starti
 
 2. Add the line `define('CRAFT_TEMPLATES_PATH', "../src/craft/templates");` to the top of Craft's `app/public/index.php` file. This lets you work directly on the source templates alongside a working installation of Craft.
 
-3. gitignore everything inside the `app` directory apart from `app/src` to prevent it being checked into Crafty Vagrant itself. ie. add the following lines to `.gitignore`:
+3. gitignore everything inside the `app` directory apart from `app/src` to prevent it being checked into Crafty Vagrant itself. We don't want to commit this change, so instead of adding it to `.gitignore`,  edit `.git/info/exclude` and add the following lines:
 
         app/*
         !app/src*
