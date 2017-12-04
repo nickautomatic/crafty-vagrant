@@ -1,6 +1,11 @@
 {
   "name": "my-project-name",
   "version": "0.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nickautomatic/crafty-vagrant"
+  },
   "devDependencies": {
     "babel-preset-es2015": "^6.5.0",
     "babelify": "^7.2.0",
