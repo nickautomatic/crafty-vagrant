@@ -162,7 +162,7 @@ gulp.task('scripts', function(){
   var bundler = plugins.browserify(path.src + '/scripts/main.js');
 
   bundler.transform(plugins.babelify, {
-      presets: ['es2015']
+      presets: ['env']
     })
     .bundle()
     .on('error', gutil.log)
