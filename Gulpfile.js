@@ -137,8 +137,6 @@ gulp.task('styles', function(){
     .pipe(plugins.autoprefixer({
       browsers: [
         'last 3 versions',
-        'ie 8',
-        'ie 9'
       ]
     }))
     // Write main.css
