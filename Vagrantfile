@@ -8,19 +8,19 @@ end
 # Configure Vagrant:
 Vagrant.configure("2") do |config|
   # If we're using VirtualBox, to improve performance let's try to
-  # make sure we assign the VM an appropriate amount of CPU / RAM:
+  # make sure we assign the VM an appropriate amount RAM:
   # cf. http://www.stefanwrobel.com/how-to-make-vagrant-performance-not-suck
   config.vm.provider "virtualbox" do |v|
     host = RbConfig::CONFIG['host_os']
 
     # Give VM 1/4 system memory:
+    # meminfo on Linux returns kB; Windows and MacOS return bytes
     if host =~ /darwin/
       mem = `sysctl -n hw.memsize`.to_i / 1024 / 1024 / 4
     elsif host =~ /linux/
       mem = `grep 'MemTotal' /proc/meminfo | sed -e 's/MemTotal://' -e 's/ kB//'`.to_i / 1024 / 4
     else
-      # for Windows, let's just use a sensible default...
-      mem = 2048
+      mem = `wmic computersystem Get TotalPhysicalMemory`.split[1].to_i / 1024 / 1024 / 4
     end
 
     v.customize ["modifyvm", :id, "--memory", mem]
